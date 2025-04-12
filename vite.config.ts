@@ -7,4 +7,14 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+  resolve: {
+    alias: {
+      '@': '/src', // Ensure this alias matches your project structure
+    },
+  },
+  build: {
+    rollupOptions: {
+      input: './index.html', // Ensure the correct entry point
+    },
+  },
 });
